@@ -13,20 +13,20 @@ public class Logger {
     }
 
     public void info(String msg) {
-        Bukkit.getConsoleSender().sendMessage(prefix + " §8[§2INFO§8]§7: " + msg);
+        Bukkit.getConsoleSender().sendMessage(prefix + " \u00A78[\u00A72INFO\u00A78]\u00A77: " + msg);
     }
 
     public void warn(String msg) {
-        Bukkit.getConsoleSender().sendMessage(prefix + " §8[§eWARN§8]§7: " + msg);
+        Bukkit.getConsoleSender().sendMessage(prefix + " \u00A78[\u00A7eWARN\u00A78]\u00A77: " + msg);
 
     }
 
     public void error(String msg) {
-        Bukkit.getConsoleSender().sendMessage(prefix + " §8[§cERROR§8]§7: " + msg);
+        Bukkit.getConsoleSender().sendMessage(prefix + " \u00A78[\u00A7cERROR\u00A78]\u00A77: " + msg);
 
     }
 
     public void error(String msg, Throwable ex) {
-        error(msg + ": §c" + ex.getMessage() + "\n§7" + Arrays.toString(ex.getStackTrace()));
+        error(msg + ": \u00A7c" + ex.getMessage() + "\n\u00A77" + Arrays.toString(ex.getStackTrace()));
     }
 }

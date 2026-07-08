@@ -63,10 +63,13 @@ public class Spawner {
         }
         this.plugin.getPlatform().runTaskLater(block.getLocation(), () -> {
             BlockState blockState = block.getState();
-            if(!(blockState instanceof CreatureSpawner)) return;
+            if(!(blockState instanceof CreatureSpawner)) {
+                editedList.remove(block);
+                return;
+            }
             CreatureSpawner creatureSpawner = (CreatureSpawner) blockState;
             creatureSpawner.setSpawnedType(this.entityType);
-            blockState.update();
+            blockState.update(true);
             editedList.remove(block);
         }, 1);
     }

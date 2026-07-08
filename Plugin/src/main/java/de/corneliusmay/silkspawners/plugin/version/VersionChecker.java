@@ -47,7 +47,7 @@ public class VersionChecker {
                 plugin.getLog().info("Checking for updates");
                 if (!update()) plugin.getLog().error("Error getting latest version");
                 else if (!check())
-                    plugin.getLog().warn("§eUpdate available! Download at https://www.spigotmc.org/resources/silkspawners.60063/ §f\nInstalled version: v" + getInstalledVersion() + "\nLatest version: v" + latestVersion);
+                    plugin.getLog().warn("\u00A7eUpdate available! Download at https://www.spigotmc.org/resources/silkspawners.60063/ \u00A7f\nInstalled version: v" + getInstalledVersion() + "\nLatest version: v" + latestVersion);
                 else plugin.getLog().info("The plugin is up to date (Current release v" + latestVersion + ")");
                 TimeUnit.HOURS.sleep(interval);
             }

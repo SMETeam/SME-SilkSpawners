@@ -5,6 +5,6 @@ import de.corneliusmay.silkspawners.plugin.config.handler.ConfigValueFormatter;
 public class MessageConfigValue implements ConfigValueFormatter<String> {
     @Override
     public String format(String value) {
-        return value.replaceAll("(?<!\\\\)\\$" , "§").replace("\\$", "$");
+        return value.replaceAll("(?<!\\\\)\\$" , "\u00A7").replace("\\$", "$");
     }
 }

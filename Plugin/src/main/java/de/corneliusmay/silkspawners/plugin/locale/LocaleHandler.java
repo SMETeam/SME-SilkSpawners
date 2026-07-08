@@ -15,7 +15,7 @@ import java.util.*;
 
 public class LocaleHandler {
 
-    private static final String DEFAULT_MESSAGE = "§cNo value found for key {0} using locale {1}.§7\n Use §l§n/silkspawners locale update confirm§7 to update the locale files.\n §eWarning!§7 Updating the locale files will overwrite all changes§7.";
+    private static final String DEFAULT_MESSAGE = "\u00A7cNo value found for key {0} using locale {1}.\u00A77\n Use \u00A7l\u00A7n/silkspawners locale update confirm\u00A77 to update the locale files.\n \u00A7eWarning!\u00A77 Updating the locale files will overwrite all changes\u00A77.";
 
     private final SilkSpawners plugin;
 
@@ -77,14 +77,14 @@ public class LocaleHandler {
     }
 
     public String getMessageClean(String key, Object... args) {
-        return MessageFormat.format(resourceBundle.getString(key).replace("$", "§"), args);
+        return MessageFormat.format(resourceBundle.getString(key).replace("$", "\u00A7"), args);
     }
 
     public String getMessage(String key, Object... args) {
         try {
-            return getPrefix() + "§f " + getMessageClean(key, args);
+            return getPrefix() + "\u00A7f " + getMessageClean(key, args);
         } catch (MissingResourceException ex) {
-            return getPrefix() + "§f " +  MessageFormat.format(DEFAULT_MESSAGE, key, locale.toString());
+            return getPrefix() + "\u00A7f " +  MessageFormat.format(DEFAULT_MESSAGE, key, locale.toString());
         }
     }
 
